@@ -1,0 +1,3 @@
+[submodule "cassandra-exporter"]
+	path = cassandra-exporter
+	url = git@github.com:masumsoft/cassandra-exporter.git
