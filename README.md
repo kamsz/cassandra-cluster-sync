@@ -1,6 +1,6 @@
 Sync data between two Cassandra clusters.
 
-This container will grab all keyspaces (except for system keyspaces) from source cluster and transfer the data to the target cluster.
+This container will grab all keyspaces (except for system keyspaces) from source cluster and transfer the schema and data to the target cluster.
 
 It is based on https://github.com/masumsoft/cassandra-exporter.
 
