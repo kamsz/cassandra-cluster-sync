@@ -1,7 +1,10 @@
 FROM cassandra:3.11.1
 
 ENV CLUSTER_FROM=cluster1 \
-    CLUSTER_TO=cluster2
+    CLUSTER_TO=cluster2 \
+    DC_NAME=dc \
+    SOURCE_RF=3 \
+    TARGET_RF=1 
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends curl && \

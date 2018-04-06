@@ -17,6 +17,7 @@ do
   fi
 
   cqlsh ${CLUSTER_FROM} -e "desc keyspace ${keyspace};" > schema.cql
+  sed -i "s/'${DC_NAME}': '${SOURCE_RF}'/'${DC_NAME}': '${TARGET_RF}'/g" schema.cql
   cqlsh ${CLUSTER_TO} -e "drop keyspace ${keyspace};"
   cqlsh ${CLUSTER_TO} -f schema.cql
   HOST=${CLUSTER_FROM} KEYSPACE=${keyspace} node /export.js
